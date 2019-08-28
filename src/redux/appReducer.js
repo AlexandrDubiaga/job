@@ -39,10 +39,11 @@ export const loginMeThunk = (data) => (dispatch) => {
     authAPI.loginUser(data).then(response => {
         if (response.data.status === "ok") {
                 dispatch(setAuthUserData(response.data,true))
-        } else {
-            debugger
-            let message = response.data.status.lenght !== 0 ? response.data.status[0] : "Some Error";
-            dispatch(stopSubmit("login", { _error: message }));
+        } else{
+            dispatch(toogleIsFetching(false))
+            dispatch(stopSubmit("login", { _error: response.data.status }));
+            dispatch(stopSubmit("login", { _error: response.data.message }));
+            
         }
     })
 }

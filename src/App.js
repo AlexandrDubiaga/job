@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import HomeContainer from './components/home/HomeContainer';
 import ProfileContainer from './components/profile/ProfileContainer';
+
 import LoginContainer from './components/login/LoginContainer';
 import NewsContainer from './components/news/NewsContainer';
 import Header from './components/header/Header';
@@ -23,9 +25,11 @@ class  App extends React.Component{
         <Header />
         <Navbar />
         <div className={style.appContent}>
-          <Route path="/profile" render={ ()=><ProfileContainer />} />
+        <Route path="/" render={()=><HomeContainer />} />
+          <Route path="/profile" render={()=><ProfileContainer />} />
           <Route path="/login" render={()=><LoginContainer />} />
           <Route path="/news" render={()=><NewsContainer />} />
+         
         </div>
       </div>
     );

@@ -19,7 +19,6 @@ const LoginForm= props =>{
                     {props.error}
                 </div>
             }
-
             <div>
                 {props.toogleFetching ?  <button disabled={true}>Login</button> :<button disabled={false}>Login</button>}
             </div>

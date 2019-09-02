@@ -5,6 +5,7 @@ import ProfileContainer from './components/profile/ProfileContainer';
 
 import LoginContainer from './components/login/LoginContainer';
 import NewsContainer from './components/news/NewsContainer';
+import MenuContainer from './components/recipes/MenuContainer';
 import Header from './components/header/Header';
 import Navbar from './components/Navbar/Navbar';
 import style from './App.module.css';
@@ -29,7 +30,7 @@ class  App extends React.Component{
           <Route path="/profile" render={()=><ProfileContainer />} />
           <Route path="/login" render={()=><LoginContainer />} />
           <Route path="/news" render={()=><NewsContainer />} />
-         
+          <Route path="/menu" render={()=><MenuContainer />} />
         </div>
       </div>
     );

@@ -9,7 +9,7 @@ class Header extends React.Component{
     
   
     render(){
-        debugger
+
         return(
             <header className={style.header}>
             <div className={style.loginBlock}>

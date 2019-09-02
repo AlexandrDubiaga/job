@@ -2,16 +2,24 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import Menu from './Menu'
-import data from '../../data.json'
+import data from '../../storage/data-recipes.json';
+import dataSummary from '../../storage/data-summary.json';
+import Summary from './Summary/Summary';
+
 class MenuContainer extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
-      }
-   
+    }
+
     render() {
         return (
             <div>
-                <Menu recipes={data} title="Delicious Recipes" />
+                <div>
+                    <Menu recipes={data} title="Delicious Recipes" />
+                </div>
+                <div>
+                    <Summary data = {dataSummary} title={"Main title for MY PROJECT"} />
+                </div>
             </div>
         )
     }
